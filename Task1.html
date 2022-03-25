@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>IRC</title>
+        <link rel="stylesheet" href="Task1.css">
+    </head>
+    <body class="bg">
+
+        <input type="image" id="image" src="./kgp.jpeg">
+
+        <h1 id="heading">International Relations Cell</h1>
+        <h2 id="head_form">Research Hackathon</h2>
+
+        <div id="inputs">
+
+            <label for="text">1) Enter your name: </label>
+            <input type="text" id="text" placeholder="Your name here">
+            <br><br>
+
+            <label for="email">2) Enter your email: </label>
+            <input type="email" id="email" placeholder="Your email address">
+            <br><br>
+
+            <label for="password">3) Enter your password: </label>
+            <input type="password" id="password" placeholder="Your password here">
+            <br><br>
+
+            <label for="radio">4) Gender</label>
+            <br>
+            <input type="radio" id="male" value="male" name="Male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" id="male" value="female" name="Female">
+            <label for="male">Female</label>
+            <br>
+            <input type="radio" id="male" value="other" name="Other">
+            <label for="male">Other</label>
+            <br><br>
+
+            <label for="number">5) Enter your age: </label>
+            <input type="number" id="number" placeholder="18">
+            <br><br>
+
+            <label for="tel">6) Enter your telephone number: </label>
+            <input type="tel" id="tel" placeholder="+0343">
+            <br><br>
+
+            <label for="date">7) Enter your project proposal date: </label>
+            <input type="date" id="date" value="date">
+            <br><br>
+
+            <label for="checkbox">8) Choose the properties your project satisfies</label>
+            <br>
+            <input type="checkbox" id="op1" value="op1">
+            <label for="op1">It is achievable in the near future</label>
+            <br>
+            <input type="checkbox" id="op2" value="op2">
+            <label for="op2">It is a full fleged proposal</label>
+            <br>
+            <input type="checkbox" id="op3" value="op3">
+            <label for="op3">It agrees win line with the hackathon's policies</label>
+            <br><br>
+
+            <label for="file">9) Upload the project proposal here in pdf or ppt format: </label>
+            <input type="file" id="file" value="file">
+            <br><br>
+
+            <label for="range">10) Rate your effort in this project</label>
+            <br>
+            <label for="range">Low</label>
+            <input type="range" id="range" value="range">
+            <label for="tange">High</label>
+            <br><br>
+
+            <label for="url">11) Enter any other website url hosted by you: </label>
+            <input type="url" id="url" placeholder="example.com">
+            <br><br>
+
+            <p>Click reset to reset all inputs of the form and submit to submit the form</p>
+            <input type="reset" id="reset" value="reset">
+            <input type="submit" id="submit" value="submit">
+
+            <label for="hidden"></label>
+            <input type="hidden" id="hidden" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+        </div>
+    </body>
+</html>
