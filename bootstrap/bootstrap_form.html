@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="stylesheet" href="bootstrap.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body class="bg-secondary text-white">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,46 +24,155 @@
           </div>
         </div>
     </nav>
-    <div class="text-center fs-1 text-decoration-underline pt-5 pb-3">Form</div>
-    <form class="p-5">
-        <div class="mb-3">
-            <label for="exampleInputName1" class="form-label">Full Name</label>
+    <h1 class="text-center text-decoration-underline pt-5 pb-3" id="heading">Form</h1>
+    <p class="text-center pt-1" id="instruction">Fields marked with * are required</p>
+    <div class="text-center" id="alerting">
+      <span id="closebtn"></span>
+    </div>
+    <form class="p-5" action="myform.php" name="rshathon" method="post" onsubmit="return fn()">
+        <div class="mb-3 input-group">
+            <label for="exampleInputName1" class="input-group-text">Full Name</label>
             <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Full Name">
+            <p class="reqd">*</p>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <div class="mb-3 input-group">
+          <label for="exampleInputEmail1" class="input-group-text">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xyz@gmail.com">
-          <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
+          <p class="reqd">*</p>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+        <div class="mb-4 input-group">
+          <label for="exampleInputPhone" class="input-group-text">Phone number</label>
+          <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Enter phone number">
+          <p class="reqd">*</p>
+      </div>
+        <div class="mb-3 input-group">
+          <label for="exampleInputPassword1" class="input-group-text">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create your password">
+          <i class="far fa-eye" id="toggle1"></i>
+          <p class="reqd">*</p>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+        <div class="mb-3 input-group">
+            <label for="exampleInputPassword2" class="input-group-text">Confirm Password</label>
             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm your password">
+            <i class="far fa-eye" id="toggle2"></i>
+            <p class="reqd">*</p>
         </div>
-        <div class="mb-4">
-            <label for="exampleInputAge" class="form-label">Age</label>
+        <div class="mb-4 input-group">
+            <label for="exampleInputAge" class="input-group-text">Age</label>
             <input type="number" class="form-control" id="exampleInputAge" placeholder="Your age">
+            <p class="reqd">*</p>
         </div>
+        <div id="gender">
+          <div class = "legend">
+            <legend id="gender-head">Gender</legend>
+            <p class="reqd">*</p>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male">
+            <label class="form-check-label" for="male">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="female">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="other">
+              <label class="form-check-label" for="female">
+                Other
+              </label>
+          </div>
+        </div>
+        <br>
         <div>
-            <label for="exampleInputOption" class="form-label">Select your preffered area of work</label>
-            <select class="form-select mb-3" aria-label="Default select example" if="exampleInputOption">
-                <option selected>Select</option>
-                <option value="1">Waste Management</option>
-                <option value="2">Electrochemistry</option>
-                <option value="3">Robotics and AI</option>
-                <option value="4">Sound and Acoustics</option>
-                <option value="5">Locomotives and vehicles</option>
-                <option value="5">Green and Sustainable Energy</option>
-            </select>
+          <div class = "legend">
+            <label for="exampleInputOption" class="form-label fs-4">Select your preffered area of work</label>
+            <p class="reqd">*</p>
+          </div>
+          <select class="form-select mb-3" aria-label="Default select example" id="exampleInputOption">
+              <option selected value="">Select</option>
+              <option value="1">Waste Management</option>
+              <option value="2">Electrochemistry</option>
+              <option value="3">Robotics and AI</option>
+              <option value="4">Sound and Acoustics</option>
+              <option value="5">Locomotives and vehicles</option>
+              <option value="5">Green and Sustainable Energy</option>
+          </select>
         </div>
+        <br><br>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">I have participated in previous events like this</label>
+            <label class="form-check-label" for="exampleCheck1">I have participated in previous events like this before</label>
         </div>
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
+    <!-- <footer class="page-footer font-small blue pt-4">
+
+        <div class="container-fluid text-center text-md-left">
+    
+        <div class="row">
+    
+            <div class="col-md-6 mt-md-0 mt-3">
+    
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>Here you can use rows and columns to organize your footer content.</p>
+    
+            </div>
+    
+            <hr class="clearfix w-100 d-md-none pb-3">
+    
+            <div class="col-md-3 mb-md-0 mb-3">
+    
+            <h5 class="text-uppercase">Links</h5>
+    
+            <ul class="list-unstyled">
+                <li>
+                <a href="#!">Link 1</a>
+                </li>
+                <li>
+                <a href="#!">Link 2</a>
+                </li>
+                <li>
+                <a href="#!">Link 3</a>
+                </li>
+                <li>
+                <a href="#!">Link 4</a>
+                </li>
+            </ul>
+    
+            </div>
+    
+            <div class="col-md-3 mb-md-0 mb-3">
+    
+            <h5 class="text-uppercase">Links</h5>
+    
+            <ul class="list-unstyled">
+                <li>
+                <a href="#!">Link 1</a>
+                </li>
+                <li>
+                <a href="#!">Link 2</a>
+                </li>
+                <li>
+                <a href="#!">Link 3</a>
+                </li>
+                <li>
+                <a href="#!">Link 4</a>
+                </li>
+            </ul>
+
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="/"> MDBootstrap.com</a>
+        </div>
+    </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="bootstrap.js"></script>  
 </body>
 </html>

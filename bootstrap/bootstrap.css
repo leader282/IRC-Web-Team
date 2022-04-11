@@ -1,0 +1,39 @@
+.reqd {
+    color: red;
+    font-size: 25px;
+    padding: 3px;
+}
+#heading {
+    font-size: 80px;
+    color: rgb(191, 144, 218);
+}
+.legend {
+    display: flex;
+}
+#gender-head {
+    width: 80px;
+}
+#instruction {
+    color: red;
+}
+#alerting {
+    margin-left: 20px;
+    visibility: hidden;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    width: 50%;
+    font-size: 14px;
+}
+#closebtn {
+    color: white;
+    font-weight: bold;
+}
+#toggle1 {
+    padding: 5px;
+    cursor: pointer;
+}
+#toggle2 {
+    padding: 5px;
+    cursor: pointer;
+}
