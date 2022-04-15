@@ -32,34 +32,34 @@
     <form class="p-5" action="myform.php" name="rshathon" method="post" onsubmit="return fn()">
         <div class="mb-3 input-group">
             <label for="exampleInputName1" class="input-group-text">Full Name</label>
-            <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Full Name">
+            <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Full Name" required>
             <p class="reqd">*</p>
         </div>
         <div class="mb-3 input-group">
           <label for="exampleInputEmail1" class="input-group-text">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xyz@gmail.com">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="xyz@gmail.com" required>
           <p class="reqd">*</p>
         </div>
         <div class="mb-4 input-group">
           <label for="exampleInputPhone" class="input-group-text">Phone number</label>
-          <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Enter phone number">
+          <input type="tel" class="form-control" id="exampleInputPhone" placeholder="Enter phone number" required>
           <p class="reqd">*</p>
       </div>
         <div class="mb-3 input-group">
           <label for="exampleInputPassword1" class="input-group-text">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create your password">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create your password" required>
           <i class="far fa-eye" id="toggle1"></i>
           <p class="reqd">*</p>
         </div>
         <div class="mb-3 input-group">
             <label for="exampleInputPassword2" class="input-group-text">Confirm Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm your password">
+            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm your password" required>
             <i class="far fa-eye" id="toggle2"></i>
             <p class="reqd">*</p>
         </div>
         <div class="mb-4 input-group">
             <label for="exampleInputAge" class="input-group-text">Age</label>
-            <input type="number" class="form-control" id="exampleInputAge" placeholder="Your age">
+            <input type="number" class="form-control" id="exampleInputAge" placeholder="Your age" required>
             <p class="reqd">*</p>
         </div>
         <div id="gender">
@@ -68,7 +68,7 @@
             <p class="reqd">*</p>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="male">
+            <input class="form-check-input" type="radio" name="gender" id="male" required>
             <label class="form-check-label" for="male">
               Male
             </label>
@@ -92,7 +92,7 @@
             <label for="exampleInputOption" class="form-label fs-4">Select your preffered area of work</label>
             <p class="reqd">*</p>
           </div>
-          <select class="form-select mb-3" aria-label="Default select example" id="exampleInputOption">
+          <select class="form-select mb-3" aria-label="Default select example" id="exampleInputOption" required>
               <option selected value="">Select</option>
               <option value="1">Waste Management</option>
               <option value="2">Electrochemistry</option>
@@ -109,68 +109,78 @@
         </div>
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
-    <!-- <footer class="page-footer font-small blue pt-4">
+    
+    <footer class="text-center text-lg-start bg-dark text-muted">
 
-        <div class="container-fluid text-center text-md-left">
-    
-        <div class="row">
-    
-            <div class="col-md-6 mt-md-0 mt-3">
-    
-            <h5 class="text-uppercase">Footer Content</h5>
-            <p>Here you can use rows and columns to organize your footer content.</p>
-    
-            </div>
-    
-            <hr class="clearfix w-100 d-md-none pb-3">
-    
-            <div class="col-md-3 mb-md-0 mb-3">
-    
-            <h5 class="text-uppercase">Links</h5>
-    
-            <ul class="list-unstyled">
-                <li>
-                <a href="#!">Link 1</a>
-                </li>
-                <li>
-                <a href="#!">Link 2</a>
-                </li>
-                <li>
-                <a href="#!">Link 3</a>
-                </li>
-                <li>
-                <a href="#!">Link 4</a>
-                </li>
-            </ul>
-    
-            </div>
-    
-            <div class="col-md-3 mb-md-0 mb-3">
-    
-            <h5 class="text-uppercase">Links</h5>
-    
-            <ul class="list-unstyled">
-                <li>
-                <a href="#!">Link 1</a>
-                </li>
-                <li>
-                <a href="#!">Link 2</a>
-                </li>
-                <li>
-                <a href="#!">Link 3</a>
-                </li>
-                <li>
-                <a href="#!">Link 4</a>
-                </li>
-            </ul>
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
 
+        <div>
+          <a href="https://www.facebook.com/IRCIITKGP/" class="me-4 text-reset" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://ircell.iitkgp.ac.in" class="me-4 text-reset" target="_blank">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="https://www.instagram.com/irc.iitkgp/?hl=en" class="me-4 text-reset" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/international-relations-cell-iit-kharagpur/mycompany/" class="me-4 text-reset" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        
+      </section>
+      
+
+      
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          
+          <div class="row mt-3">
+            
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>International Relations Cell
+              </h6>
             </div>
+
+            
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">
+                Contact
+              </h6>
+              <p><i class="fas fa-home me-3"></i>International Relations Cell, 
+                Indian Institute of Technology Kharagpur, 
+                Kharagpur, West Bengal, 
+                India - 721302</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                rsh.ircell@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i>+91 86397 89316</p>
+            </div>
+            
+          </div>
+          
         </div>
-        </div>
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="/"> MDBootstrap.com</a>
-        </div>
-    </footer> -->
+      </section>
+      
+
+      
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://ircell.iitkgp.ac.in">ircell.iitkgp.ac.in</a>
+      </div>
+      
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="bootstrap.js"></script>  

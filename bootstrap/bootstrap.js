@@ -2,7 +2,7 @@ let alerting = document.getElementById('alerting');
 
 let final = false;
 
-let formfilled = 0;
+var email_Sent = false;
 
 const togglePassword1 = document.querySelector("#toggle1");
 const password_toggle1 = document.querySelector("#exampleInputPassword1");
@@ -123,41 +123,34 @@ function validateForm(){
     return (reqd_checking && final);
 }
 
-function fn() {
-    if(validateForm() && sendEmail()){
-        alert("Thanks your form is submitted!");
-        formfilled = 1;
-        return true;
-    }
-    return false;
-}
-
 function sendEmail() {
     const email = document.getElementById('exampleInputEmail1').value;
     Email.send({
         SecureToken : "a4aebccd-b155-4ddc-bbd5-0fdde241bc8d",
         To : email,
         From : "biswanathsanto@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        Subject : "Research Hackathon",
+        Body : "Greetings from International Relations Cell, IIT Kharagpur!! We are delighted to inform you that your response has been recorded"
     }).then(
       message => {
-          console.log(message);
           if(message=="OK"){
-              return true;
-          }else{
-              alert("Invalid email address!");
-              return false;
+              window.email_Sent = true;
           }
       }
     );
 }
 
-setInterval(() => {
-    if(formfilled==1){
+function fn() {
+    sendEmail();
+    if(validateForm() && window.email_Sent){
+        alert("Thanks your form is submitted!");
         form.reset();
-        formfilled = 0;
+        return true;
     }
+    return false;
+}
+
+setInterval(() => {
     let name_check = getName();
     let email_check = getEmail();
     let age_check = getAge();

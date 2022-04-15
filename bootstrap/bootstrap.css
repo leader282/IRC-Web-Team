@@ -17,6 +17,7 @@
     color: red;
 }
 #alerting {
+    position: relative;
     margin-left: 20px;
     visibility: hidden;
     padding: 20px;
