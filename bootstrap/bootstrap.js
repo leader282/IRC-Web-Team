@@ -2,8 +2,6 @@ let alerting = document.getElementById('alerting');
 
 let final = false;
 
-var email_Sent = false;
-
 const togglePassword1 = document.querySelector("#toggle1");
 const password_toggle1 = document.querySelector("#exampleInputPassword1");
 
@@ -123,26 +121,20 @@ function validateForm(){
     return (reqd_checking && final);
 }
 
-function sendEmail() {
+async function sendEmail() {
     const email = document.getElementById('exampleInputEmail1').value;
-    Email.send({
+    return await Email.send({
         SecureToken : "a4aebccd-b155-4ddc-bbd5-0fdde241bc8d",
         To : email,
         From : "biswanathsanto@gmail.com",
         Subject : "Research Hackathon",
         Body : "Greetings from International Relations Cell, IIT Kharagpur!! We are delighted to inform you that your response has been recorded"
-    }).then(
-      message => {
-          if(message=="OK"){
-              window.email_Sent = true;
-          }
-      }
-    );
+    });
 }
 
-function fn() {
-    sendEmail();
-    if(validateForm() && window.email_Sent){
+async function fn() {
+    const email_Sent = await sendEmail();
+    if(validateForm() && email_Sent == "OK"){
         alert("Thanks your form is submitted!");
         form.reset();
         return true;
